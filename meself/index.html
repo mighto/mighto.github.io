@@ -46,12 +46,14 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="Nine hundred cases of life        Nine hundred cases of life       &#x2F;&#x2F; 人生900格     var start &#x3D; &amp;apos;1995-11&amp;apos;     var now &#x3D; new Date()     &#x2F;&#x2F; 拆分年月日     start &#x3D; start.split(&amp;apos;-&amp;apos;)     &#x2F;&#x2F; 得到月数     start &#x3D; p">
+<meta property="og:type" content="website">
 <meta property="og:title" content="meself">
 <meta property="og:url" content="https:&#x2F;&#x2F;mighto.github.io&#x2F;meself&#x2F;index.html">
 <meta property="og:site_name" content="TwentyAfter">
+<meta property="og:description" content="Nine hundred cases of life        Nine hundred cases of life       &#x2F;&#x2F; 人生900格     var start &#x3D; &amp;apos;1995-11&amp;apos;     var now &#x3D; new Date()     &#x2F;&#x2F; 拆分年月日     start &#x3D; start.split(&amp;apos;-&amp;apos;)     &#x2F;&#x2F; 得到月数     start &#x3D; p">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-19T15:22:38.234Z">
+<meta property="og:updated_time" content="2021-01-09T03:11:29.583Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://mighto.github.io/meself/">
@@ -205,6 +207,49 @@
       
       <div class="post-body">
           <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=31234186&auto=0&height=32"></iframe>
+
+
+<html>
+<head>
+<title>Nine hundred cases of life</title>
+</head>
+<body>
+<div style="width:600px;margin:auto auto;">
+    <canvas id="cases" width="600" , height="600">Nine hundred cases of life</canvas>
+</div>
+<script>
+    // 人生900格
+    var start = '1995-11'
+    var now = new Date()
+    // 拆分年月日
+    start = start.split('-')
+    // 得到月数
+    start = parseInt(start[0]) * 12 + parseInt(start[1])
+    // 得到月数
+    nowMonth = parseInt(now.getFullYear()) * 12 + parseInt(now.getMonth() + 1)
+    var months = Math.abs(nowMonth - start)
+    var drawing = document.getElementById('cases')
+    var ctx = drawing.getContext('2d')
+    var n = 0;
+    ctx.lineWidth = 0.5
+    for (r = 1; r <= 30; r++) {
+        for (i = 1; i <= 30; i++) {
+            n++;
+            if (n < months) {
+                ctx.strokeStyle = '#cccccc'
+                ctx.strokeRect((i - 1) * 20, (r - 1) * 20, 20, 20)
+            } else if (n == months) {
+                ctx.fillStyle = 'red'
+                ctx.fillRect((i - 1) * 20, (r - 1) * 20, 20, 20)
+            } else {
+                ctx.strokeStyle = '#000000'
+                ctx.strokeRect((i - 1) * 20, (r - 1) * 20, 20, 20)
+            }
+        }
+    }
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
       </div>
       
       
@@ -259,7 +304,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -272,7 +317,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -297,7 +342,7 @@
 <div class="copyright">
   
   &copy; 2017 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -306,12 +351,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">62k</span>
+    <span title="站点总字数">63k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:43</span>
+    <span title="站点阅读时长">1:44</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
